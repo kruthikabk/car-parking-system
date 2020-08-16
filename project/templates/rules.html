@@ -1,0 +1,37 @@
+{% extends 'basic2.html' %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block body %}
+{% load static %}
+
+
+<div class="card">
+    <h5 class="card-header"> <p style="text-align:center">Parking Rules</p></h5>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>1.Leave space within 1 metre of another vehicle parked in front or behind (does not apply when angle parking)
+        <br>
+           2.Before leaving your parked vehicle you must ensure that: <br>
+                       * The parking brake is on <br>
+                       * If you are more than three metres away from your vehicle you must <br>
+                       * Remove the key out of the ignition <br>
+                       * Lock all doors and windows if there is no one in the vehicle. <br>
+        <br>
+           3.Parking spaces for motor cars shall be provided within the plot as specified.
+            </p>
+       
+      </blockquote>
+    </div>
+  </div>
+
+  <br>
+  
+  <div class="dropdown-divider"></div>
+  <div class="text-center">
+  <a class="btn btn-primary ml-2 mt-3 " style="text-align:center" href="/reservation" role="button" >Book</a>
+  </div>
+{% endblock body %}

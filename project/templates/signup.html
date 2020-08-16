@@ -1,0 +1,56 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href={% static 'css/main1.css' %}  rel="stylesheet" >
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <body class="text-center">
+    <form class="form-signin" action="/signup" method="post"> {% csrf_token %}
+      
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+      
+        <h1><span class="badge badge-success mb-2">Sign Up</h1>
+
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong></strong> {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        {% endfor %}
+
+            <input type="text" id="username" name="username" class="form-control mt-2" placeholder="username" required>
+            <input type="text" id="fname" name="fname" class="form-control mt-2" placeholder="First Name" required>
+            <input type="text" id="lname" name="lname" class="form-control mt-2" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" class="form-control mt-2" placeholder="Email" required>
+            <input type="password" id="pass1" name="pass1" class="form-control mt-2" placeholder="Password" required>
+            <input type="password" id="pass2" name="pass2" class="form-control mt-2" placeholder="Confirm Password" required>
+        
+        <br>
+        
+        <button type="submit" class="btn btn-primary">Sign in</button>
+          
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Already have account?</a>
+        <a href="/login" class="btn btn-primary mt-2" role="button" aria-pressed="true">Login</a>
+        </div>
+    </form>
+   
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

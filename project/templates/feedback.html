@@ -1,0 +1,44 @@
+{% extends 'basic2.html' %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block body %}
+{% load static %}
+        <div class="container mb-3">
+  
+          <form action="/feedback" method="post">{% csrf_token %}
+  
+          
+          <h3><span class="badge badge-info mt-3">Your Feedback</span>
+               
+          <input type="text" id="name" name="name" class="form-control mt-3" placeholder="enter your name" required>
+          <input type="email" id="email" name="email" class="form-control mt-2" placeholder="enter your email" required>
+          
+          
+          <textarea class="form_control mt-2" id="desc" name="desc" placeholder="your feedback" rows="3" required></textarea>
+  
+          <br>
+  
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+  
+  
+          </h3>
+          </form>
+            
+        </div>
+      
+    </body>
+    </html>
+
+{% endblock body %}
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
